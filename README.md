@@ -19,11 +19,11 @@ ssh -i путь_до_SSH_ключа/название_файла_с_SSH_ключ�
 ```
 Клонируйте проект на сервер
 ```
-git clone git@github.com:AnnaMihailovna/tasking-django-react.git
+git clone git@github.com:kora21/taski-docker.git
 ```
 Переходим в директорию backend-приложения проекта
 ```
-cd tasking-django-react/backend/
+cd taski-docker/backend/
 ```
 Создаём виртуальное окружение
 ```
@@ -55,7 +55,7 @@ python manage.py collectstatic
 ```
 Из корня проекта скопируем статику бэкенда в системную директорию
 ```
-sudo cp -r /home/yc-user/tasking-django-react/backend/static_backend/ /var/www/taski/
+sudo cp -r /home/yc-user/taski-docker/backend/static_backend/ /var/www/taski/
 ```
 Запускаем веб-сервер разработки Django
 ```
@@ -65,7 +65,7 @@ python manage.py runserver
 ```
 ALLOWED_HOSTS = ['xxx.xxx.xxx.xxx', '127.0.0.1', 'localhost']
 ```
-В другом окне терминала установите зависимости для фронтенд-приложения. Перейдите в директорию tasking-django-react/frontend/ и выполните команду
+В другом окне терминала установите зависимости для фронтенд-приложения. Перейдите в директорию taski-docker/frontend/ и выполните команду
 ```
 npm i
 ```
@@ -116,12 +116,12 @@ User=yc-user
 # /home/<имя-пользователя-в-системе>/
 # <директория-с-проектом>/<директория-с-файлом-manage.py>/.
 # Например:
-WorkingDirectory=/home/yc-user/tasking-django-react/backend/
+WorkingDirectory=/home/yc-user/taski-docker/backend/
 
 # Команду, которую вы запускали руками, теперь будет запускать systemd:
 # /home/<имя-пользователя-в-системе>/
 # <директория-с-проектом>/<путь-до-gunicorn-в-виртуальном-окружении> --bind 0.0.0.0:8000 backend.wsgi
-ExecStart=/home/yc-user/tasking-django-react/backend/venv/bin/gunicorn --bind 0.0.0.0:8000 backend.wsgi
+ExecStart=/home/yc-user/taski-docker/backend/venv/bin/gunicorn --bind 0.0.0.0:8000 backend.wsgi
 
 [Install]
 # В этом параметре указывается вариант запуска процесса.
