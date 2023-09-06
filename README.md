@@ -5,7 +5,6 @@
 и переводить из группы "незавершённые" в "завершённые". Деплой на удаленный сервер.
 
 ### Технологический стек
-* Python 3.9, Django REST, Gunicorn, Nginx, JS, Node.js
 [![Python](https://img.shields.io/badge/-Python-464646?style=flat&logo=Python&logoColor=56C0C0&color=cd5c5c)](https://www.python.org/)
 [![Django](https://img.shields.io/badge/-Django-464646?style=flat&logo=Django&logoColor=56C0C0&color=0095b6)](https://www.djangoproject.com/)
 [![Django REST Framework](https://img.shields.io/badge/-Django%20REST%20Framework-464646?style=flat&logo=Django%20REST%20Framework&logoColor=56C0C0&color=cd5c5c)](https://www.django-rest-framework.org/)
